@@ -8,12 +8,12 @@ Also is a good example of how to use `webpack-dev-server`
 ```
 npm install
 ```
-## Run (Local Server)
+## Run (Development)
 
 ```
 npm run dev
 ```
-## Build
+## Build (Production)
 
 ```
 npm run prod
