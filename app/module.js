@@ -3,18 +3,20 @@ import angularRouter from 'angular-ui-router';
 
 import Router from './router';
 
-import FormDirective from './directives/inputForm/InputFormDirective.js';
+import Style from './main.css';
 
-import HomeService from './services/home/HomeService.js';
+import HomeController from './controllers/home/home.controller.js';
 
-import HomeController from './controllers/home/HomeController.js';
+import FormDirective from './directives/inputForm/inputForm.directive.js';
 
-angular.module('angular-es6', ['ui.router'])
+import HomeService from './services/home/home.service.js';
+
+angular.module('angularjs-es6', ['ui.router'])
 
 	.config(Router)
 
-	.directive('inputForm', () => new FormDirective())
+	.controller('HomeCtrl', HomeController)
 
-	.service('HomeService', HomeService)
+	.directive('inputForm', FormDirective)
 
-	.controller('homeCtrl', HomeController);
+	.service('HomeService', HomeService);

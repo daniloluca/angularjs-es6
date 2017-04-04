@@ -1,4 +1,4 @@
-import BaseController from '../BaseController.js';
+import BaseController from '../base.controller.js';
 
 export default class HomeController extends BaseController {
 	constructor($scope, HomeService) {
@@ -10,6 +10,6 @@ export default class HomeController extends BaseController {
 	}
 
 	static getTemplateUrl() {
-		return 'app/controllers/home/home.html';
+		return 'app/controllers/home/home.view.html';
 	}
 }

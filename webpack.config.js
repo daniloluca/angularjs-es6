@@ -1,15 +1,19 @@
+var path = require("path");
+var webpack = require('webpack');
+
 module.exports = {
-    entry: "./app/module.js",
-    devtool: 'source-map',
+    entry: {
+        app: ["./app/module.js"]
+    },
     output: {
-            path: __dirname,
+            path: path.resolve(__dirname, "dist"),
             filename: "./dist/bundle.js"
     },
     module: {
         loaders: [
             {
                 test: /\.css$/,
-                loader: "style!css"
+                loaders: ["style-loader", "css-loader"]
             },
             {
                 test: /\.js$/,
@@ -20,5 +24,12 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+    devServer: {
+        hot: true
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NamedModulesPlugin()
+    ]
 };
