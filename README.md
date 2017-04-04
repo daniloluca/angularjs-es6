@@ -1,5 +1,6 @@
 # Angular ES6 Template
 A simple template to work with ES6 (ES2015) in AngularJS 1.x.x
+
 Also is a good example of how to use `webpack-dev-server`
 
 ## Instalation
