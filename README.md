@@ -21,4 +21,4 @@ npm run prod
 
 ## Visualization
 
-Just open [http://localhost:8080/](http://localhost:8080/) and you are good to go.
+Is you are using the command `npm run dev` then just open [http://localhost:8080/](http://localhost:8080/) and you are good to go.
